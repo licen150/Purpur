@@ -26,5 +26,9 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs aR single command using the runners shell
+      - name: Applying patches
+        run: ./gradlew applyPatches
+        
       - name: Build
         run: ./gradlew build
+        
